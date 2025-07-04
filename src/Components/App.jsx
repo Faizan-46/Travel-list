@@ -35,6 +35,7 @@ export default function App() {
         items={items}
         deleteItems={handleDelete}
         onDeleteItems={handleToggle}
+        onReset={Reset}
       />
       <Stats items={items} />
     </div>

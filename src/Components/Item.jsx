@@ -6,7 +6,7 @@ export default function Item({ item, deleteItems, onDeleteItems }) {
         value={item.packed}
         onChange={() => onDeleteItems(item.id)}
       />
-      <span style={item.packed ? { textDecoration: 'line-through' } : {}}>
+      <span className={item.packed ? 'packed' : ''}>
         {item.quantity} {item.description}
       </span>
       <button onClick={() => deleteItems(item.id)}>❌</button>

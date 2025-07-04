@@ -7,6 +7,8 @@ export default function Form({ AddItems }) {
   function handleSubmit(e) {
     e.preventDefault();
 
+    if (!description) return; // Don't add empty items
+
     const newItem = { description, quantity, packed: false, id: Date.now() };
     console.log(newItem);
 
